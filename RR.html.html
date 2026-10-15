@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>পুরনো হাট – বাংলার অ্যান্টিক সংগ্রহশালা</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#123d38;--green2:#0c2b27;--brass:#b8893b;--brass2:#e0b866;--oxb:#7a2a2a;--bg:#f2f4f1;--card:#fff;--text:#18211f;--muted:#5d6967;--line:#dde3df;--tint:#e8eee9;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1514;--card:#16211f;--text:#e8eeeb;--muted:#9fb0ab;--line:#26363a;--tint:#1d2c29;--oxb:#d98a8a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1514;--card:#16211f;--text:#e8eeeb;--muted:#9fb0ab;--line:#26363a;--tint:#1d2c29;--oxb:#d98a8a;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif;font-size:16px;line-height:1.55}
+h1,h2,h3{font-family:"Noto Serif Bengali","Hind Siliguri",serif;line-height:1.3;margin:0}
+button{font:inherit;cursor:pointer}
+a{color:inherit;text-decoration:none}
+.top{background:var(--green2);color:#cfe0db;font-size:13px;text-align:center;padding:6px 10px}
+header{background:var(--green);color:#fff;display:flex;align-items:center;gap:14px;padding:10px 16px;flex-wrap:wrap;position:sticky;top:0;z-index:5}
+.logo{font-family:"Noto Serif Bengali",serif;font-weight:700;font-size:24px;color:var(--brass2);white-space:nowrap}
+.logo small{display:block;font-family:"Hind Siliguri",sans-serif;font-size:11px;font-weight:400;color:#b9cdc7}
+.search{flex:1;min-width:200px;display:flex;border-radius:8px;overflow:hidden;border:2px solid var(--brass)}
+.search input{flex:1;border:0;padding:10px 12px;font:inherit;background:#fff;color:#111;min-width:0}
+.search button{border:0;background:var(--brass);color:#fff;padding:0 18px;font-weight:600}
+.cartb{background:none;border:1px solid #4d7a73;color:#fff;border-radius:8px;padding:8px 14px}
+.cartb b{background:var(--brass);color:#111;border-radius:10px;padding:0 7px;margin-left:4px}
+nav{background:var(--green2);display:flex;gap:6px;padding:8px 16px;overflow-x:auto}
+nav button{flex:none;background:none;border:1px solid transparent;color:#cfe0db;padding:5px 14px;border-radius:20px;white-space:nowrap}
+nav button.on,nav button:hover{background:var(--brass);color:#111}
+.hero{background:var(--green);color:#fff;display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:20px;padding:40px 6% 54px;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(28px,4.6vw,48px);color:#fff;max-width:560px}
+.hero p{color:#bfd3cd;max-width:480px;margin:14px 0 22px;font-size:17px}
+.btn{background:var(--brass);color:#14110a;border:0;border-radius:8px;padding:11px 22px;font-weight:600}
+.btn:hover{background:var(--brass2)}
+.btn.o{background:none;color:#fff;border:1px solid #5d8a82;margin-left:8px}
+.clockwrap{justify-self:center;width:min(300px,70vw)}
+.clockwrap svg{width:100%;height:auto;filter:drop-shadow(0 12px 24px rgba(0,0,0,.4))}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);max-width:1200px;margin:-26px auto 0;position:relative;border-radius:10px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.12)}
+.trust div{background:var(--card);padding:14px 16px;font-size:14px}.trust b{display:block;font-size:15px}
+.wrap{max-width:1200px;margin:0 auto;padding:30px 16px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.bar h2{font-size:24px}.bar select{padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);font:inherit}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer}
+.card:hover{border-color:var(--brass)}
+.img{height:190px;display:flex;align-items:center;justify-content:center;font-size:84px;background:var(--tint);position:relative;border-bottom:3px double var(--brass)}
+.era{position:absolute;top:10px;left:10px;background:var(--green);color:var(--brass2);font-size:12px;padding:2px 10px;border-radius:4px}
+.ver{position:absolute;top:10px;right:10px;background:var(--card);color:var(--green);font-size:12px;padding:2px 8px;border-radius:4px;border:1px solid var(--line)}
+.info{padding:14px;display:flex;flex-direction:column;gap:5px;flex:1}
+.info h3{font-size:17px}.info .m{font-size:13px;color:var(--muted)}
+.price{font-size:21px;font-weight:600;color:var(--oxb);font-family:"Noto Serif Bengali",serif}
+.info .btn{margin-top:auto;width:100%}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px}
+.story{background:var(--green);color:#fff;padding:44px 6%;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.story h2{font-size:28px;color:var(--brass2)}.story p{color:#bfd3cd}
+.steps{display:grid;gap:12px}.steps div{background:var(--green2);padding:14px 16px;border-radius:8px;border-left:4px solid var(--brass)}
+.sell{max-width:1200px;margin:0 auto;padding:34px 16px;text-align:center}
+.sell p{color:var(--muted);max-width:560px;margin:8px auto 16px}
+footer{background:var(--green2);color:#b9cdc7;font-size:14px}
+.fc{display:flex;gap:clamp(24px,8vw,100px);justify-content:center;flex-wrap:wrap;padding:30px 16px}
+.fc b{display:block;color:var(--brass2);margin-bottom:4px}.fc div{line-height:2}
+.cp{text-align:center;padding:12px;border-top:1px solid #1d4a44;font-size:12px}
+dialog{border:0;border-radius:12px;padding:0;background:var(--card);color:var(--text);width:min(520px,94vw);max-height:90vh}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line)}
+.dh button{border:0;background:none;font-size:22px;color:var(--text)}
+.det .img{height:220px;font-size:110px;border-bottom:3px double var(--brass)}
+.dbody{padding:16px 18px;display:grid;gap:10px}
+.spec{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14px}.spec dt{color:var(--muted)}.spec dd{margin:0}
+.item{display:flex;gap:10px;align-items:center;padding:10px 18px;border-bottom:1px solid var(--line)}
+.item .e{font-size:32px}.item .i{flex:1;font-size:14px}
+.q button{border:1px solid var(--line);background:none;color:var(--text);border-radius:4px;width:26px}
+.tot{padding:16px 18px;display:grid;gap:10px}.tot div{display:flex;justify-content:space-between;font-size:18px}
+.tot small{color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--green);color:#fff;padding:10px 20px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:30;border:1px solid var(--brass)}
+.toast.show{opacity:1}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--brass2);outline-offset:2px}
+@media(max-width:820px){.hero,.story{grid-template-columns:1fr}.trust{grid-template-columns:1fr 1fr;margin-top:-20px}.clockwrap{width:200px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="top">সারা বাংলাদেশে ক্যাশ অন ডেলিভারি • বিকাশ / নগদে পেমেন্ট • ৭ দিনের ফেরত সুবিধা</div>
+<header>
+  <a href="#" class="logo">পুরনো হাট<small>বাংলার অ্যান্টিক সংগ্রহশালা</small></a>
+  <form class="search" onsubmit="return go(event)"><input id="q" type="search" placeholder="ঘড়ি, মুদ্রা, পিতলের জিনিস খুঁজুন…" aria-label="খুঁজুন"><button>খুঁজুন</button></form>
+  <button class="cartb" id="cb">🛒 কার্ট <b id="cnt">০</b></button>
+</header>
+<nav id="nav"></nav>
+
+<section class="hero">
+  <div>
+    <h1>প্রতিটি পুরনো জিনিসের একটা গল্প আছে</h1>
+    <p>যাচাই করা খাঁটি অ্যান্টিক ঘড়ি, রেডিও, মুদ্রা, পিতল-কাঁসা আর আরও অনেক কিছু। সরাসরি সংগ্রাহকদের কাছ থেকে, আপনার দরজায়।</p>
+    <button class="btn" onclick="document.getElementById('shop').scrollIntoView()">সংগ্রহ দেখুন</button><button class="btn o" onclick="document.getElementById('sell').scrollIntoView()">আপনার জিনিস বিক্রি করুন</button>
+  </div>
+  <div class="clockwrap" aria-label="চলমান ঘড়ি">
+    <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="96" fill="#7a5a22"/><circle cx="100" cy="100" r="90" fill="#e0b866"/><circle cx="100" cy="100" r="82" fill="#f7f1e1"/><g id="ticks"></g><g id="nums" font-family="Noto Serif Bengali,serif" font-size="15" fill="#2a2113" text-anchor="middle"></g>
+    <line id="hh" x1="100" y1="100" x2="100" y2="58" stroke="#2a2113" stroke-width="5" stroke-linecap="round"/><line id="mh" x1="100" y1="100" x2="100" y2="38" stroke="#2a2113" stroke-width="3.5" stroke-linecap="round"/><line id="sh" x1="100" y1="112" x2="100" y2="30" stroke="#7a2a2a" stroke-width="1.6"/><circle cx="100" cy="100" r="5" fill="#7a2a2a"/></svg>
+  </div>
+</section>
+<div class="trust"><div><b>✔ যাচাইকৃত খাঁটি</b>বিশেষজ্ঞ দিয়ে পরীক্ষিত</div><div><b>🚚 ক্যাশ অন ডেলিভারি</b>৬৪ জেলায়</div><div><b>📦 নিরাপদ প্যাকেজিং</b>ভাঙার ঝুঁকি কম</div><div><b>↩ ৭ দিনে ফেরত</b>বর্ণনার সাথে না মিললে</div></div>
+
+<main class="wrap" id="shop">
+  <div class="bar"><h2 id="ttl">সব সংগ্রহ</h2><select id="sort" aria-label="সাজান"><option value="d">নতুন সংযোজন</option><option value="l">দাম: কম থেকে বেশি</option><option value="h">দাম: বেশি থেকে কম</option><option value="o">সবচেয়ে পুরনো আগে</option></select></div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<section class="story"><div><h2>কীভাবে নিশ্চিত হই জিনিসটা খাঁটি?</h2><p>প্রতিটি জিনিস আমাদের সংগ্রাহক ও বিশেষজ্ঞরা হাতে নিয়ে দেখেন, তারপরই তালিকায় ওঠে।</p></div>
+<div class="steps"><div><b>১. উৎস যাচাই</b><br>বিক্রেতার পরিচয় ও জিনিসের ইতিহাস জানা হয়।</div><div><b>২. অবস্থা পরীক্ষা</b><br>ছবি ও বর্ণনায় ক্ষয়-ক্ষতি সৎভাবে লেখা থাকে।</div><div><b>৩. সার্টিফিকেট</b><br>দামি জিনিসের সাথে সত্যতার সনদ দেওয়া হয়।</div></div></section>
+
+<section class="sell" id="sell"><h2>আপনার কাছে কি পুরনো কিছু আছে?</h2><p>দাদার আমলের ঘড়ি, পুরনো মুদ্রা বা পিতলের জিনিস—ছবি পাঠান, আমরা সঠিক দাম জানাব।</p><button class="btn" onclick="toast('বিক্রয় ফর্ম শীঘ্রই আসছে (ডেমো)')">বিক্রির জন্য আবেদন</button></section>
+
+<footer><div class="fc"><div><b>পুরনো হাট</b>আমাদের কথা<br>কীভাবে কাজ করে<br>যোগাযোগ</div><div><b>সাহায্য</b>ডেলিভারি তথ্য<br>ফেরত নীতি<br>প্রশ্নোত্তর</div><div><b>পেমেন্ট</b>ক্যাশ অন ডেলিভারি<br>বিকাশ • নগদ<br>কার্ড</div></div><div class="cp">© ২০২৬ পুরনো হাট। এটি একটি ডেমো স্টোরফ্রন্ট।</div></footer>
+
+<div class="toast" id="toast"></div>
+<dialog id="dp"></dialog>
+<dialog id="dc"><div class="dh"><h3>আপনার কার্ট</h3><button onclick="dc.close()" aria-label="বন্ধ">✕</button></div><div id="ci"></div><div class="tot" id="ct"></div></dialog>
+
+<script>
+const P=[
+{id:1,e:"🕰️",n:"ব্রিটিশ আমলের ম্যান্টেল ক্লক",c:"ঘড়ি",y:1920,p:18500,o:"কলকাতা",s:"চালু, কাঠের খোল অক্ষত",d:"সেগুন কাঠের খোল, পিতলের পেন্ডুলাম। সপ্তাহে একবার চাবি দিলেই চলে।"},
+{id:2,e:"⏰",n:"পিতলের টেবিল অ্যালার্ম ঘড়ি",c:"ঘড়ি",y:1950,p:4200,o:"ঢাকা",s:"চালু, সামান্য দাগ",d:"হাতে দম দেওয়া মেকানিক্যাল অ্যালার্ম। ডায়ালে রেডিয়াম-যুগের লেখা।"},
+{id:3,e:"📻",n:"ভালভ রেডিও (ফিলিপস)",c:"রেডিও ও গ্রামোফোন",y:1955,p:9800,o:"নারায়ণগঞ্জ",s:"ভালভ চালু, কাঠামো ভালো",d:"মূল কাঠের ক্যাবিনেট। শোপিস বা সংগ্রহের জন্য আদর্শ।"},
+{id:4,e:"🎙️",n:"হর্নওয়ালা গ্রামোফোন",c:"রেডিও ও গ্রামোফোন",y:1930,p:32000,o:"মুর্শিদাবাদ",s:"চালু, হর্ন পুনঃরঙ করা",d:"হাতে ঘোরানো দম, ৭৮ আরপিএম রেকর্ড চলে। দুটি পুরনো রেকর্ডসহ।"},
+{id:5,e:"🪙",n:"ব্রিটিশ ভারতের রৌপ্য রুপি মুদ্রা",c:"মুদ্রা ও নোট",y:1912,p:2600,o:"বরিশাল",s:"ভালো, স্পষ্ট ছাপ",d:"রাজা পঞ্চম জর্জের মুখাবয়বযুক্ত খাঁটি রুপার মুদ্রা।"},
+{id:6,e:"📜",n:"পুরনো তামার শিলালিপি ফলক",c:"বই ও পাণ্ডুলিপি",y:1850,p:14000,o:"কুমিল্লা",s:"ক্ষয় আছে, লেখা পাঠযোগ্য",d:"জমির দলিল-সংক্রান্ত তাম্রপত্র। ইতিহাসপ্রেমীদের জন্য বিরল সংগ্রহ।"},
+{id:7,e:"🪔",n:"কাঁসার প্রদীপ ও পঞ্চপ্রদীপ সেট",c:"পিতল-কাঁসা",y:1900,p:5600,o:"রাজশাহী",s:"খুব ভালো",d:"হাতে খোদাই করা নকশা। পূজা বা সাজসজ্জা, দুইয়েই চলে।"},
+{id:8,e:"🏺",n:"মাটির নকশি কলস",c:"পিতল-কাঁসা",y:1935,p:3800,o:"যশোর",s:"ভালো, ছোট চিপ আছে",d:"গ্রামবাংলার হাতে গড়া নকশি পাত্র। ফুলদানি হিসেবে চমৎকার।"},
+{id:9,e:"📷",n:"কোডাক ফোল্ডিং ক্যামেরা",c:"ক্যামেরা",y:1938,p:11500,o:"চট্টগ্রাম",s:"বেলো ভালো, শাটার চালু",d:"৬২০ ফিল্মের বক্স ক্যামেরা। চামড়ার কেসসহ।"},
+{id:10,e:"🧭",n:"পিতলের নাবিক কম্পাস",c:"পিতল-কাঁসা",y:1925,p:6900,o:"খুলনা",s:"চালু, কাচ অক্ষত",d:"জাহাজি নাবিকদের ব্যবহৃত খাঁটি পিতলের কম্পাস, কাঠের বাক্সসহ।"},
+{id:11,e:"📞",n:"কালো রোটারি ডায়াল টেলিফোন",c:"রেডিও ও গ্রামোফোন",y:1960,p:3500,o:"ঢাকা",s:"ভালো, তার নতুন",d:"ভারী বেকেলাইটের শরীর। ঘুরিয়ে ডায়াল করার পুরনো আমেজ।"},
+{id:12,e:"🗝️",n:"নকশা করা পিতলের তালা-চাবি",c:"পিতল-কাঁসা",y:1890,p:2200,o:"সিলেট",s:"চালু",d:"জমিদার বাড়ির সিন্দুকের তালা। চাবিসহ পুরো সেট।"}
+];
+const bn=n=>String(n).replace(/\d/g,d=>"০১২৩৪৫৬৭৮৯"[d]);
+const fmt=n=>"৳"+bn(n.toLocaleString("en-US"));
+const cats=["সব",...new Set(P.map(x=>x.c))];
+let cat="সব",term="",cart={};
+const $=id=>document.getElementById(id);
+$("nav").innerHTML=cats.map(c=>`<button class="${c==="সব"?"on":""}" onclick="setCat('${c}')">${c}</button>`).join("");
+function setCat(c){cat=c;[...$("nav").children].forEach(b=>b.classList.toggle("on",b.textContent===c));$("ttl").textContent=c==="সব"?"সব সংগ্রহ":c;draw()}
+function go(e){e.preventDefault();term=$("q").value.trim();draw();$("shop").scrollIntoView();return false}
+$("sort").onchange=draw;
+function draw(){
+ let l=P.filter(x=>(cat==="সব"||x.c===cat)&&(!term||(x.n+x.c+x.d).includes(term)));
+ const s=$("sort").value;
+ if(s==="l")l.sort((a,b)=>a.p-b.p);if(s==="h")l.sort((a,b)=>b.p-a.p);if(s==="o")l.sort((a,b)=>a.y-b.y);if(s==="d")l.sort((a,b)=>b.id-a.id);
+ $("grid").innerHTML=l.length?l.map(x=>`<article class="card" onclick="show(${x.id})"><div class="img"><span class="era">${bn(x.y)} সাল</span><span class="ver">✔ যাচাইকৃত</span>${x.e}</div><div class="info"><h3>${x.n}</h3><div class="m">${x.c} • ${x.o}</div><div class="price">${fmt(x.p)}</div><button class="btn" onclick="event.stopPropagation();add(${x.id})">কার্টে যোগ করুন</button></div></article>`).join(""):'<div class="empty">কিছু পাওয়া যায়নি। অন্য শব্দ দিয়ে খুঁজুন।</div>'}
+function show(id){const x=P.find(y=>y.id===id);const d=$("dp");
+ d.innerHTML=`<div class="dh"><h3>${x.n}</h3><button onclick="dp.close()" aria-label="বন্ধ">✕</button></div><div class="det"><div class="img">${x.e}</div></div><div class="dbody"><div class="price">${fmt(x.p)}</div><p style="margin:0">${x.d}</p><dl class="spec"><dt>আনুমানিক সাল</dt><dd>${bn(x.y)} (${bn(2026-x.y)} বছরের পুরনো)</dd><dt>অবস্থা</dt><dd>${x.s}</dd><dt>উৎস</dt><dd>${x.o}</dd><dt>সত্যতা</dt><dd>✔ বিশেষজ্ঞ যাচাইকৃত</dd></dl><button class="btn" onclick="add(${x.id});dp.close()">কার্টে যোগ করুন</button></div>`;d.showModal()}
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove("show"),1600)}
+function add(id){cart[id]=1;upd();toast("কার্টে যোগ হয়েছে")}
+function rm(id){delete cart[id];upd()}
+function upd(){const ids=Object.keys(cart);$("cnt").textContent=bn(ids.length);
+ if(!ids.length){$("ci").innerHTML='<div class="empty">আপনার কার্ট খালি। পছন্দের জিনিস যোগ করুন।</div>';$("ct").innerHTML="";return}
+ let sum=0;$("ci").innerHTML=ids.map(i=>{const x=P.find(y=>y.id==i);sum+=x.p;return `<div class="item"><div class="e">${x.e}</div><div class="i">${x.n}<br><b>${fmt(x.p)}</b></div><button class="q" style="border:1px solid var(--line);background:none;color:var(--text);border-radius:6px;padding:2px 10px" onclick="rm(${x.id})">সরান</button></div>`}).join("");
+ const dl=sum>=20000?0:120;
+ $("ct").innerHTML=`<small>প্রতিটি অ্যান্টিক একক, তাই পরিমাণ ১টি।</small><div><span>সাবটোটাল</span><span>${fmt(sum)}</span></div><div><span>ডেলিভারি</span><span>${dl?fmt(dl):"ফ্রি"}</span></div><div><b>মোট</b><b>${fmt(sum+dl)}</b></div><button class="btn" onclick="toast('ডেমো: আসল অর্ডার হয় না')">ক্যাশ অন ডেলিভারিতে অর্ডার করুন</button>`}
+$("cb").onclick=()=>$("dc").showModal();
+const NS="http://www.w3.org/2000/svg";
+for(let i=0;i<60;i++){const a=i*6*Math.PI/180,r1=i%5?76:72,l=document.createElementNS(NS,"line");
+ l.setAttribute("x1",100+78*Math.sin(a));l.setAttribute("y1",100-78*Math.cos(a));l.setAttribute("x2",100+r1*Math.sin(a));l.setAttribute("y2",100-r1*Math.cos(a));l.setAttribute("stroke","#2a2113");l.setAttribute("stroke-width",i%5?.6:1.6);$("ticks").appendChild(l)}
+for(let i=1;i<=12;i++){const a=i*30*Math.PI/180,t=document.createElementNS(NS,"text");t.setAttribute("x",100+60*Math.sin(a));t.setAttribute("y",105-60*Math.cos(a));t.textContent=bn(i);$("nums").appendChild(t)}
+function tick(){const n=new Date(),s=n.getSeconds(),m=n.getMinutes()+s/60,h=(n.getHours()%12)+m/60;
+ $("sh").setAttribute("transform",`rotate(${s*6} 100 100)`);$("mh").setAttribute("transform",`rotate(${m*6} 100 100)`);$("hh").setAttribute("transform",`rotate(${h*30} 100 100)`)}
+tick();setInterval(tick,1000);draw();upd();
+</script>
+</body>
+</html>
